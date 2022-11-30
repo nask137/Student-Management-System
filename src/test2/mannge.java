@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class mannge {
     public static void main(String[] args) {
         System.out.println("-------欢迎来到成都大学学生信息管理系统-------");
-        load a = new load();
-        int flag = a.load();
+      int flag=  load.Signin();
         if (flag==1) {
             ArrayList<Student2> students = new ArrayList<>();
             Scanner sc = new Scanner(System.in);

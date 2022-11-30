@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class load {
-    public int load() {
+    public static int Signin() {
         ArrayList<user> users = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         int choice;
@@ -191,4 +191,7 @@ do {
     }
 }while(flag);
    }
+
+    private load() {
+    }
 }
