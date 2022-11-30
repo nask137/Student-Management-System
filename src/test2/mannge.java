@@ -4,31 +4,42 @@ import java.util.Scanner;
 
 public class mannge {
     public static void main(String[] args) {
-        System.out.println("-------欢迎来到成都大学学生管理系统-------");
-        ArrayList<Student2> students=new ArrayList<>();
-        Scanner sc=new Scanner(System.in);
-        int choice;
-        do {
-            menu();
-            System.out.println("请输入你的选择:");
-             choice=sc.nextInt();
-            switch(choice) {
-            case 1:add(students);
-            continue;
-            case 2:shanchu(students);
-            continue;
-            case 3:Chazhao(students);
-            continue;
-            case 4: xiugai(students);
-            continue;
-            case 5:show(students);
-            continue;
-            case 0: System.out.println("退出！");
-            break;
-            default:   System.out.println("输入错误，请重新输入！");
-        }
+        System.out.println("-------欢迎来到成都大学学生信息管理系统-------");
+        load a = new load();
+        int flag = a.load();
+        if (flag==1) {
+            ArrayList<Student2> students = new ArrayList<>();
+            Scanner sc = new Scanner(System.in);
+            int choice;
+            do {
+                menu();
+                System.out.println("请输入你的选择:");
+                choice = sc.nextInt();
+                switch (choice) {
+                    case 1:
+                        add(students);
+                        continue;
+                    case 2:
+                        shanchu(students);
+                        continue;
+                    case 3:
+                        Chazhao(students);
+                        continue;
+                    case 4:
+                        xiugai(students);
+                        continue;
+                    case 5:
+                        show(students);
+                        continue;
+                    case 0:
+                        System.out.println("退出！");
+                        break;
+                    default:
+                        System.out.println("输入错误，请重新输入！");
+                }
 
-        }while(choice!=0);
+            } while (choice != 0);
+        }
     }
 
 
@@ -55,6 +66,7 @@ public class mannge {
                 String address = sc.next();
                 s.setAddress(address);
                 list.add(s);
+                System.out.println("添加成功！");
 
             }
             else System.out.println("此学生已经存在！");
