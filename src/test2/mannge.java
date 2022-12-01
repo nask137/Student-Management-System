@@ -113,7 +113,7 @@ public class mannge {
             list.get(index).setId(id);
             System.out.println("请输入要修改学生的住址");
             String address = sc.next();
-            list.get(index).setName(address);
+            list.get(index).setAddress(address);
             System.out.println("修改成功！");
         }
     }

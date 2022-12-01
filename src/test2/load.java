@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class load {
+    private load() {}
     public static int Signin() {
         ArrayList<user> users = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
@@ -22,7 +23,8 @@ public class load {
                 case 2:
                     zhuce(users);
                     continue;
-                case 3:wangji(users);
+                case 3:
+                    wangji(users);
                     continue;
                 case 0:
                     System.out.println("退出！");
@@ -53,7 +55,7 @@ return 1;
             System.out.println("请输入要注册用户的身份证号码");
             checki(u);
             System.out.println("请输入要注册用户的手机号");
-           checkn(u);
+            checkn(u);
             s.add(u);
             System.out.println("注册成功！");
         }
@@ -191,7 +193,4 @@ do {
     }
 }while(flag);
    }
-
-    private load() {
-    }
 }
