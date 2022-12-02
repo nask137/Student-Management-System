@@ -48,7 +48,7 @@ return 1;
         System.out.println("请输入要注册用户的姓名");
         String name = sc.next();
         if (chazhao(s, name) == -1) {
-            u.setUsername(name);
+            u.setName(name);
             System.out.println("请输入要注册用户的密码");
             System.out.println("密码由字母(大小写均可)和数字组成且长度不能小于5");
              checkp(u);
@@ -64,7 +64,7 @@ return 1;
 
     public static int chazhao(ArrayList<user> list, String name) {
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getUsername().equals(name))
+            if (list.get(i).getName().equals(name))
                 return i;
         }
         return -1;
@@ -99,9 +99,7 @@ return 1;
                        System.out.println("若重新登录请按1，若返回菜单请按0");
                        flag=sc.nextInt();
                        if (flag == 0) return false;
-                       else if (flag==1) {
-
-                       }
+                       else if (flag==1) {}
                        else System.out.println("请输入0或1哦亲！");
                    }while(flag!=1);
                 }
@@ -112,12 +110,12 @@ return 1;
     public static String getRandomString(int length) {
         String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789123456789012345678901234567890";
         Random random = new Random();
-        StringBuffer sb = new StringBuffer();
+        StringBuffer s = new StringBuffer();
         for (int i = 0; i < length; i++) {
             int number = random.nextInt(62);
-            sb.append(str.charAt(number));
+            s.append(str.charAt(number));
         }
-        return sb.toString();
+        return s.toString();
 
     }
    public  static void wangji(ArrayList<user> u){
@@ -129,7 +127,7 @@ if (dex==-1) System.out.println("不存在此id");
 else {
     System.out.println("请输入手机号！");
     String number=sc.next();
-    if (u.get(dex).getPhonenumber().equals(number)) System.out.println("用户名："+u.get(dex).getUsername()+" 密码："+u.get(dex).getPassword() );
+    if (u.get(dex).getPhonenumber().equals(number)) System.out.println("用户名："+u.get(dex).getName()+" 密码："+u.get(dex).getPassword() );
 else System.out.println("手机号错误！");
 }
    }
